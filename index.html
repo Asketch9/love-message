@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Good Morning, My Love</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!--  Audio, muted until button click -->
+  <audio id="bg-music" loop>
+    <source src="mat-jao.mp3" type="audio/mpeg" />
+    Your browser does not support audio playback.
+  </audio>
+
+  <!--  Intro Overlay -->
+  <div id="intro-screen" class="intro-screen">
+    <h1>Hey meri jaan... 💗</h1>
+    <button id="enter-btn" class="glow-button">Play My Heart</button>
+  </div>
+
+  <!-- Main Message -->
+  <div id="main-content" class="hidden">
+    <div class="card">
+      <h1 class="greeting">Good Morning, My Love ☀️</h1>
+      <div class="message" id="message">
+        <p>Loading your love story...</p>
+      </div>
+      <div class="sparkle-heart">💖</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

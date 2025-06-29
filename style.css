@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #ffeaea, #ffd6d6);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: url('heart-cursor.png'), auto;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 60px 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  animation: popIn 1.5s ease-out;
+  transform: perspective(1000px) rotateY(-2deg);
+}
+
+.greeting {
+  font-size: 2.5rem;
+  color: #e91e63;
+  text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  animation: floatText 4s ease-in-out infinite;
+}
+
+.message p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 20px;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+}
+
+.sparkle-heart {
+  font-size: 3rem;
+  margin-top: 40px;
+  animation: beat 1s infinite, floatHeart 6s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+@keyframes floatHeart {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes floatText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+.intro-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #fff0f0, #ffe0e0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.intro-screen h1 {
+  font-size: 2.2rem;
+  color: #e91e63;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.glow-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background: #ff5e7e;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px #ff5e7e, 0 0 20px #ff9aa2;
+  transition: transform 0.2s ease;
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 8px #ff6e88; }
+  50% { box-shadow: 0 0 18px #ff9aa2; }
+  100% { box-shadow: 0 0 8px #ff6e88; }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(#fff2f2, #ffd1d1);
+  font-family: 'Dancing Script', cursive;
+  overflow: hidden;
+  cursor: none; 
+}
+
+
+.petal {
+  position: fixed;
+  top: -20px;
+  width: 20px;
+  height: 20px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/2917/2917242.png');
+  background-size: cover;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sparkle {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: url('heart-cursor.png') no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+.glow-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+  box-shadow: 0 0 20px rgba(255, 105, 135, 0.6);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  animation: pulse 2s infinite;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
